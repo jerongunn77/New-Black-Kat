@@ -1,0 +1,401 @@
+/*
+Name: Responsive navigation
+Author: Jean LAW YIM WAN
+Author URI: http://jean-lawyimwan.fr/
+Copyright: 2016, Jean LAW YIM WAN
+*/
+/**
+ * Mixins
+ */
+/**
+ * Variables
+ */
+
+
+
+.noScroll {
+  overflow: hidden
+}
+#social-icon-wrapper {
+  padding-left: 10px;
+}
+
+.logo {
+  display: inline-block;
+  width: 30%;
+  text-align: center;
+  padding-top: 45px;
+  font-size: 50px;
+  font-family: 'Rubik', sans-serif;
+  color: #21c22c;
+}
+
+.navbar {
+  display: inline-block;
+  float: right;
+  padding-top: 45px;
+  padding-left: 25px;
+  font-size: 20px;
+  list-style: none;
+}
+
+.navbar a {
+  
+  color: #fff;
+  margin: 0 0 3px 0;
+  text-decoration: none;
+  margin-left: 20px;
+  font-family: 'Rubik', sans-serif;
+  text-transform: uppercase;
+
+
+
+}
+.navbar li a{
+
+}
+.navbar a:hover {
+  color: #21c22c;
+}
+
+.navcontainer {
+  background-color: transparent;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10;
+}
+
+.navcontent {
+  width: 200%;
+  height: 700px;
+  position: relative;
+  top: 150px;
+  font-family: 'Ubuntu', sans-serif;
+ }
+
+.content h1 {
+   text-align: center;
+}
+
+.footer h2 {
+   text-align: center;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+header.big {
+  height: 150px;
+}
+
+header.small {
+  height: 50px;
+  background: #fff;
+  background: url("../img/toplongbar.jpg");  
+  background-repeat: no-repeat;
+  
+
+}
+.border {
+
+}
+ .big .CallNow {
+  display: none;
+}
+.small .navbar {
+    padding: 10px;
+    padding-left: 20px;
+    background: url("../img/topbarbackground.jpg");  
+     -webkit-transition: width 5s; /* Safari */
+    transition: width 15s;
+    background-repeat: no-repeat;
+    background-size: contain;
+   
+}
+
+ .navcontainer .small{
+  background: #2ac01e;
+}
+ .fa-phone {
+    color: #fff;
+}
+
+}
+.small .navbar a {
+  font-size: 15px;
+  padding: 7px;
+  padding-left: 20px;
+}
+
+.small .logo {
+  padding-top: 10px;
+  font-size: 25px;
+
+  background-color: #000;
+    z-index: -1 !important;
+     -webkit-transition: width 5s; /* Safari */
+    transition: width 15s;
+}
+.logo a{
+  font-size: 25px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.mobileNav {
+  display: none;
+  width: 100%;
+}
+
+.mobileNav button{
+  float: right;
+  margin-top: 10px;
+  background-color: silver;
+  border: none;
+  color: white;
+  font-size: 20px;
+  width: 50px;
+  height: 50px;
+}
+
+.mobileNav button span, .mobileNav button span:before, .mobileNav button span:after {
+  cursor: pointer;
+  border-radius: 1px;
+  height: 4px;
+  width: 30px;
+  background: white;
+  position: absolute;
+  display: block;
+  content: '';
+}
+ 
+.mobileNav button span:before {
+  top: -10px;
+}
+.mobileNav button span:after {
+  bottom: -10px; 
+}
+
+.mobileNav button span, .mobileNav button span:before, .mobileNav button span:after {
+  transition: all 300ms ease-in-out;
+}
+.mobileNav button.active span {
+  background-color: transparent;
+}
+.mobileNav button.active span:before, .mobileNav button.active span:after {
+  top: 0;
+}
+.mobileNav button.active span:before {
+  transform: rotate(45deg);
+}
+.mobileNav button.active span:after {
+  transform: rotate(-45deg);
+}
+
+.mobileNav button:focus {
+    outline: none;
+}
+
+
+
+
+
+.mobileMenu {
+  height: 100%;
+  z-index: 1;
+  width: 100%;
+  position: fixed;
+  margin-left: -100%;
+  overflow-x: auto;
+  background-color: silver;
+  top: 150px;
+
+}
+
+.mobileMenu a {
+  display: block;
+  color: black;
+  text-decoration: none;
+  font-family: 'Ubuntu', sans-serif;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-family: 'Ubuntu', sans-serif;
+  text-transform: uppercase;
+  color: white;
+  font-size: 20px;
+  
+}
+
+.mobileMenu a:hover {
+  background-color: darkgray;
+   transition: all 0.3s;
+  -moz-transition: all 0.3s; /* Firefox 4 */
+  -webkit-transition: all 0.3s; /* Safari and Chrome */
+  -o-transition: all 0.3s; /* Opera */
+  color: #6C1753;
+}
+.nav {
+  
+  position: absolute;
+  text-align: right;
+  width: 72%;
+  opacity: 0;
+}
+.opacityOn {
+  opacity: 1 !important;
+  
+}
+.opacityOff {
+  opacity: 0 !important;
+}
+.nav h1 {
+  font-size: 19px;
+  padding-top: 15px;
+  font-family: 'Metal Mania', cursive;
+  color: #fff;
+  
+}
+.nav h1 span{
+  font-size: 19px;
+  padding-top: 15px;
+  font-family: 'Rubik', sans-serif;
+  color: #fff;
+  
+}
+
+
+@media only screen and (max-width: 550px) {
+  .navbar {display: none;}
+  .logo {width: 100%;
+         padding-top: 25px;}
+  .mobileNav {display: block}
+  .container {border-bottom: none;}
+  #main {font-size: 10px;}
+  .nav h1 {display: none;}
+.mobileNav button {
+  display: none;
+}
+}
+
+.navWidth {
+  margin-left: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/** Social Icons Navbar */
+#social-icon-wrapper {
+  width: 200px;
+  height: auto;
+  margin: 10px auto;
+  padding-bottom: 50px; }
+
+.social-icon {
+  
+  width: 51px;
+  height: 50px;
+  float: left;
+  margin-top: 30px;
+  margin-right: 15px;
+  
+  text-align: left;
+  background: transparent url("../img/socialicons.png") 0 0 no-repeat;
+  background-size: 200px; }
+
+#twitter {
+  background-position: 0px 0px;
+  -webkit-transition: all 0.3s ease;
+          transition: all 0.3s ease;
+          margin-left: -10px !important; }
+
+#twitter:hover {
+  background-position: 0px -62px; }
+
+#facebook {
+  background-position: -69px 0px;
+  -webkit-transition: all 0.3s ease;
+          transition: all 0.3s ease; }
+
+#facebook:hover {
+  background-position: -69px -62px; }
+
+#linkedin {
+  background-position: -139px 0px;
+  -webkit-transition: all 0.3s ease;
+          transition: all 0.3s ease; }
+
+#linkedin:hover {
+  background-position: -139px -62px; }
+
+.topnavsection {
+  background: #000000 url("../img/navbkground.jpg");
+
+  background-repeat: no-repeat;
+    background-position: center; 
+    background-size: cover;
+  margin: 0 auto;
+  position: relative;
+  height: 400px;
+
+
+}
+.topnavsection h1{
+  
+  text-align: center;
+  font-family: 'Metal Mania', cursive;
+  color:#fff;
+  font-size: 68px;
+  letter-spacing: 5px;
+  border-top: 4px solid #21c22c;
+  border-bottom: 4px solid #21c22c;
+     -webkit-transition-delay: 225s; /* Safari */
+    transition-delay: 225s;
+}
+
+.h1container {
+  padding-top: 150px;
+  padding-left: 620px;
+  padding-right: 620px;
+
+}
+@media (max-width: 992px) {
+  .h1container{
+  display: none;
+ }
+}
+
+.topnavsection h2{
+  padding-top: 10px;
+  font-family: 'Rubik', sans-serif;
+  text-shadow: 1px 1px 2px rgba(87, 214, 67, .4);
+  text-transform: uppercase;
+  color:#fff;
+  font-size: 36px;
+  position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+  text-align: center;
+  }
+
+.fixed-header {
+  position: fixed !important;
+  top:0; left:0;
+  width: 100%; 
+}
+

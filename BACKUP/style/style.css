@@ -1,0 +1,134 @@
+body {
+  background-color: #000;
+}
+
+.hero {position: relative; text-align: center}
+.hero-content {display: block; position: relative; }
+
+.parallax {
+  display: block;
+  text-align: center;
+  padding: 10em 1em;
+  color: white; overflow: hidden
+}
+.parallax h1 {font-size: 3em; text-shadow: 1px 1px 2px black; margin-bottom: 15px}
+.parallax p {font-family: arial, sans-serif; font-size: 1em; text-transform: uppercase; letter-spacing: 0.1em; font-weight: bold; color: black;}
+.nyc {background: url("../img/Untitled-2.png") no-repeat center center}
+
+.madrid {background: url("../img/slide2.jpg") no-repeat center center}
+
+.paris {background: url(../img/slide2.jpg) no-repeat center center}
+
+.spacer {display: block; color: #333; font-family: arial, sans-serif; padding: 3em 0;background-color:#000;}
+.spacer h3 {font-family: lobster, sans-serif; font-size: 2em; margin-bottom: 15px; color:#2ac01e; text-align: center;}
+.spacer p {font-size: 15px; line-height: 22px; margin-bottom: 15px; color:#eee;}
+button {border: 1px solid #aaa; padding: 0.75em 1.5em; border-radius: 4px; background: none; font-size: 1.25em; color: #555; display: inline-block; margin-right: -5px; vertical-align: top}
+button:hover {background: #00ace9; color: white; border-color: #00ace9; cursor: pointer}
+button.danger {margin-left: 25px; background: #d30; color: white; border-color: #d30}
+button.danger:hover {background: #a00; border-color: #a00}
+.container {max-width: 960px; margin: 0 auto; width: 95%; }
+.centered {text-align: center; padding-bottom: 3.75em}
+
+
+.cleft-wrapper {
+position: relative;
+top: -1.25rem;
+margin-bottom: -1.25rem;
+left: 0;
+width: 100%;
+height: 1.25rem;
+overflow: hidden;
+}
+.cleft-left, .cleft-right {
+width: 50%;
+height: 1.25rem;
+background-color: #000;
+position: absolute;
+top: 0;
+}
+.cleft-left {
+left: -1.5rem;
+}
+.cleft-right {
+right: -1.5rem;
+}
+.cleft-left:before, .cleft-right:before {
+content: ' ';
+display: block;
+position: absolute;
+width: 0;
+height: 0;
+border-style: solid;
+}
+.cleft-left:before {
+right: -1.5rem;
+border-width: 1.25rem 0 0 1.5rem;
+border-color: transparent transparent transparent #000;
+}
+.cleft-right:before {
+left: -1.5rem;
+border-width: 1.25rem 1.5rem 0 0;
+border-color: transparent #000 transparent transparent;
+}
+
+.carrotBox {position: relative}
+.carrot {
+display: block;
+height: 0;
+width: 0;
+border-top: 1.25rem solid #000;
+border-right: 1.5rem solid transparent;
+border-left: 1.5rem solid transparent;
+position: absolute;
+left: 50%;
+margin-left: -1.5rem;
+bottom: -1.25rem;
+}
+
+/* Featured Work CSS */
+.smalldesc {
+    height: 1px;
+    overflow:hidden;
+  border:1px solid red;
+}
+.bigdesc {
+    height: auto;
+}
+.faIcon {
+	color: #fff;
+	float: left;
+	padding-right: 7px;
+}
+
+button{
+  display: inline;
+  position: relative;
+  top:-0px;
+  min-width: 80px;
+  min-height: 30px;
+  padding: 10px 25px 10px 25px;
+  cursor: pointer;
+  font-family: 'Arvo',sans-serif;
+  font-weight: bold;
+  color:#FFF;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 0 0 6px 0;
+  margin-right: 20px;
+  text-decoration: none;
+}
+
+button:hover{
+  top:2px;
+  border-width: 0 0 4px 0;
+  background-color:#21c22c;
+  border-color:#126d19;
+}
+button:active{
+  top:8px;
+  padding-bottom: 8px;
+  border-width: 2px 0 0 0;
+}.green{  
+  background-color:#21c22c;
+  border-color:#126d19;
+}
